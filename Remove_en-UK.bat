@@ -1,0 +1,1 @@
+control intl.cpl,, /f:"%CD%\Remove_en-UK.xml"
