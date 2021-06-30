@@ -124,4 +124,8 @@ return
 
                         ;-------------------------Remove en-UK-----------------------------------
                         ; Ctrl+Win+Space removes en-UK
-                        ^#Space:: run, "./Remove_en-UK.bat"
+                        ^#Space:: run, "./Remove_en-UK.bat",, Hide
+
+                        ;-------------------------Wake Ubuntu-----------------------------------
+                        ; Ctrl+Win+u wakes Ubuntu
+                        ^#u:: run, "./wake_ubuntu.bat",, Hide
