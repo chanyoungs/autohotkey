@@ -2,15 +2,17 @@
 
     <!--User List-->
     <gs:UserList>
-        <gs:User UserID="Current"/>
+        <gs:User UserID="Current" />
     </gs:UserList>
 
-    <!--input preferences--> 
+    <!--input preferences-->
     <gs:InputPreferences>
         <!--add en-UK keyboard input-->
-        <gs:InputLanguageID Action="add" ID="0809:00000809"/>
+        <gs:InputLanguageID Action="add" ID="0809:00000809" />
+        <gs:InputLanguageID Action="add" ID="0809:00010409" />
         <!--remove en-UK keyboard input-->
-        <gs:InputLanguageID Action="remove" ID="0809:00000809"/>
+        <gs:InputLanguageID Action="remove" ID="0809:00000809" />
+        <gs:InputLanguageID Action="remove" ID="0809:00010409" />
     </gs:InputPreferences>
 
 </gs:GlobalizationServices>

@@ -20,34 +20,27 @@ return
 #IfWinNotExist ahk_class Emacs
 {
     ^!e::
-        Run C:\Users\chany\Documents\Programming\emacs\emacs-26.3-x86_64\bin\emacsclientw.exe -c -n -a "" -f C:\Users\chany\Documents\Programming\emacs\.emacs.d\server\server
+        Run C:\Users\chany\Programming\emacs\emacs-27.2-x86_64\bin\emacsclientw.exe -c -n -a "" -f C:\Users\chany\Programming\emacs\.emacs.d\server\server
     return
 }
 
 #IfWinActive, ahk_group winTest
     {
-        Capslock::Control ; make Caps Lock the control button
+        ;Capslock::Control ; make Caps Lock the control button
         #IfWinActive, ahk_exe Code.exe
             {
                 ^WheelUp::f
                 ^WheelDown::b
                 !WheelUp::f
                 !WheelDown::b
-                #if GetKeyState("CapsLock","P")
-                {
-                    WheelUp::f
-                    WheelDown::b
-                }
+                ;#if GetKeyState("CapsLock","P")
+                ;{
+                ;    WheelUp::f
+                ;    WheelDown::b
+                ;}
             }
 
         }
-
-        ;-------------------VSCode Scroll wheel--------------------------------
-        ;#IfWinActive ahk_class Chrome_WidgetWin_1
-        ;^WheelUp::f
-        ;Capslock & WheelUp::f
-        ;f::b
-        ;return
 
         ;-----------------------Surface Pen hotkeys--------------------------
         #IfWinExist, ahk_class screenClass
