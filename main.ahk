@@ -17,10 +17,11 @@ return
 ;ActiveHwnd := WinExist("A") ; to assign Active windo id to 'ActiveHwnd' use... ActiveHwnd := WinExist("A")
 ;MsgBox, The active window is "%ActiveHwnd%" ; to print a message box use... MsgBox, The active window is "%ActiveHwnd%".
 
-#IfWinNotExist ahk_class Emacs
 {
     ^!e::
-        Run C:\Users\chany\Programming\emacs\emacs-27.2-x86_64\bin\emacsclientw.exe -c -n -a "" -f C:\Users\chany\Programming\emacs\.emacs.d\server\server
+        if not WinExist("ahk_class Emacs")
+            Run C:\Users\chany\Programming\emacs\emacs-27.2-x86_64\bin\emacsclientw.exe -c -n -a "" -f C:\Users\chany\Programming\emacs\.emacs.d\server\server
+        WinActivate, ahk_class Emacs
     return
 }
 
