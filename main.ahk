@@ -56,5 +56,5 @@ F20:: {
 #HotIf ; Reset context
 
 ;----------------------- Miscellaneous --------------------------
-^#Space:: Run "./Remove_en-UK.bat", , "Hide"
+^#Space:: Run "./Remove_en-US.bat", , "Hide"
 ^#u::      Run "./wake_ubuntu.bat", , "Hide"
